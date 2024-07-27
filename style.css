@@ -7,12 +7,13 @@ body {
     font-family: 'mifuente';
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Cambiado a flex-start para permitir scroll */
     min-height: 100vh; 
     padding: 20px; /* Añade padding para evitar que el contenido toque los bordes en pantallas pequeñas */
     margin: 0;
     background-color: #f0f0f0;
     box-sizing: border-box;
+     overflow-y: auto; /* Añade scroll vertical si es necesario */
      
 }
 
