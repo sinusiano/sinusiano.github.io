@@ -6,6 +6,7 @@
 body {
     font-family: 'mifuente', cursive;
     font-size: italic;
+    font: bold;
     display: flex;
     justify-content: center;
     align-items: flex-start;
