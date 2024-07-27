@@ -11,12 +11,12 @@
     <table class="custom-table">
         <thead>
             <tr class="Encabezado">
-                <th>GRADE</th>
-                <th>NOM</th>
-                <th>VESTE</th>
-                <th>PANTALON</th>
-                <th>CHAUSSURES</th>
-                <th>No Telephone</th>
+                <th>Grade</th>
+                <th>Nom</th>
+                <th>Veste</th>
+                <th>Pantalon</th>
+                <th>Chaussures</th>
+                <th>Téléphone</th>
             </tr>
         </thead>
         <tbody>
@@ -27,7 +27,7 @@
                 <td>L</td>
                 <td>L</td>
                 <td>42</td>
-                <td></td>
+                <td>6 24 40 97 90</td>
             </tr>
             <!-- Repite el bloque <tr>...</tr> 16 veces más -->
              <tr id="cpl">
@@ -36,7 +36,7 @@
                 <td>L</td>
                 <td>L</td>
                 <td>45</td>
-                <td></td>
+                <td>7 83 43 45 47</td>
              </tr>
 
              <tr id="cpl">
@@ -45,7 +45,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>7 51 47 07 67</td>
              </tr>
              <tr id="cpl">
                 <td>Cpl</td>
@@ -53,7 +53,7 @@
                 <td>XL</td>
                 <td>L</td>
                 <td>45</td>
-                <td></td>
+                <td>7 67 75 84 44</td>
              </tr>
              <tr id="cpl">
                 <td>Cpl</td>
@@ -61,7 +61,7 @@
                 <td>M</td>
                 <td>M</td>
                 <td>46</td>
-                <td></td>
+                <td>7 70 03 08 50</td>
              </tr>
              <tr id="cpl">
                 <td>Cpl</td>
@@ -69,7 +69,7 @@
                 <td>M</td>
                 <td>L</td>
                 <td>44</td>
-                <td></td>
+                <td>6 41 32 83 47</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -77,7 +77,7 @@
                 <td>M</td>
                 <td>L</td>
                 <td>43</td>
-                <td></td>
+                <td>6 67 11 22 56</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -85,7 +85,7 @@
                 <td>M</td>
                 <td>M</td>
                 <td>4Z</td>
-                <td></td>
+                <td>6 21 08 71 68</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -93,7 +93,7 @@
                 <td>M</td>
                 <td>M</td>
                 <td>43</td>
-                <td></td>
+                <td>745 385 50 60</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -101,7 +101,7 @@
                 <td>M</td>
                 <td>M</td>
                 <td>43</td>
-                <td></td>
+                <td>7 78 38 96 59</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -109,7 +109,7 @@
                 <td>L</td>
                 <td>L</td>
                 <td>45</td>
-                <td></td>
+                <td>7 44 29 90 59</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -117,7 +117,7 @@
                 <td>M</td>
                 <td>M</td>
                 <td>42</td>
-                <td></td>
+                <td>6 18 73 71 65</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -125,7 +125,7 @@
                 <td>M</td>
                 <td>M</td>
                 <td>43</td>
-                <td></td>
+                <td>7 54 12 05 14</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -133,7 +133,7 @@
                 <td>L</td>
                 <td>XL</td>
                 <td>46</td>
-                <td></td>
+                <td>7 66 34 52 87</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -141,7 +141,7 @@
                 <td>M</td>
                 <td>M</td>
                 <td>43</td>
-                <td></td>
+                <td>6 41 29 09 97</td>
              </tr>
              <tr>
                 <td>1cl</td>
@@ -149,10 +149,25 @@
                 <td>L</td>
                 <td>L</td>
                 <td>46</td>
-                <td></td>
+                <td>7 83 18 54 15</td>
              </tr>
         </tbody>
     </table>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var rows = document.querySelectorAll('.custom-table tr');
+        
+            rows.forEach(function(row) {
+                row.addEventListener('touchstart', function() {
+                    this.classList.add('hover');
+                });
+        
+                row.addEventListener('touchend', function() {
+                    this.classList.remove('hover');
+                });
+            });
+        });
+        </script>
 </body>
 </html> 
            
