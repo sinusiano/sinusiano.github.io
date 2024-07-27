@@ -4,7 +4,8 @@
 }
 
 body {
-    font-family: 'mifuente';
+    font-family: 'mifuente',  cursive ;
+    font-size:italic;
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Cambiado a flex-start para permitir scroll */
@@ -12,9 +13,49 @@ body {
     padding: 5px; /* Añade padding para evitar que el contenido toque los bordes en pantallas pequeñas */
     margin: 0;
     background-color: #f0f0f0;
+    background:
+    linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: radial-gradient(circle at center, 
+                #ffffff 0%, 
+                #f0f0f0 30%, 
+                #e0e0e0 60%, 
+                #caa4a4 100%);
     box-sizing: border-box;
      overflow-y: auto; /* Añade scroll vertical si es necesario */
      
+}
+
+/* gradientes*/
+.custom-table th {
+background: linear-gradient(to right, #4b1111, #7c1e1e);
+    color: rgb(247, 243, 243);
+    border-top: 1px solid #7c1e1e;
+    border-left: 1px solid #7c1e1e;
+    border-right: 1px solid #2e0a0a;
+    border-bottom: 1px solid #2e0a0a;
+}
+#cpl td {
+    background: linear-gradient(to bottom, rgb(153, 156, 155), rgb(133, 136, 135));
+}
+
+#cpl:hover td {
+    background: linear-gradient(to bottom, rgb(116, 12, 12), rgb(96, 10, 10));
+    color: white;
+}
+
+.custom-table th::after, .custom-table td::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+                rgba(255,255,255,0.3) 0%, 
+                rgba(255,255,255,0) 50%, 
+                rgba(0,0,0,0.1) 51%, 
+                rgba(0,0,0,0) 100%);
+    pointer-events: none;
 }
 
 .table-container {
