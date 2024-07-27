@@ -61,7 +61,9 @@ body {
 }
 
 .custom-table {
-    min-width: 600px;
+      min-width: 700px; /* Aumentado de 600px */
+    max-width: 1300px; /* Aumentado de 1200px */
+    /* ... otros estilos ... */
     border-collapse: separate;
     border-spacing: 0;
     width: 100%;
