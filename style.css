@@ -17,6 +17,7 @@ body {
      
 }
 
+
 .custom-table {
     border-collapse: separate; /* Cambia a separate para permitir bordes individuales */
     border-spacing: 0; /* Elimina el espacio entre celdas */
@@ -29,6 +30,23 @@ body {
     border: 1px solid #770606;
 }
 
+/* Para navegadores WebKit (Chrome, Safari) */
+.custom-table-container::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.custom-table-container::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Color del fondo de la barra de desplazamiento */
+}
+
+.custom-table-container::-webkit-scrollbar-thumb {
+    background: #888; /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.custom-table-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color de la barra de desplazamiento al pasar el mouse */
+}
 /* Media queries para dispositivos móviles */
 @media (max-width: 600px) {
     .custom-table {
