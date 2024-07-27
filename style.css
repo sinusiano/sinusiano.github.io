@@ -9,27 +9,43 @@ body {
     justify-content: center;
     align-items: flex-start; /* Cambiado a flex-start para permitir scroll */
     min-height: 100vh; 
-    padding: 20px; /* Añade padding para evitar que el contenido toque los bordes en pantallas pequeñas */
+    padding: 5px; /* Añade padding para evitar que el contenido toque los bordes en pantallas pequeñas */
     margin: 0;
     background-color: #f0f0f0;
     box-sizing: border-box;
      overflow-y: auto; /* Añade scroll vertical si es necesario */
      
 }
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    padding: 10px;
+}
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .custom-table {
+        font-size: 14px;
+        max-width: 100%; /* Asegura que la tabla ocupe todo el ancho en móviles */
+    }
+    
+    .custom-table th, .custom-table td {
+        padding: 5px; /* Reduce el padding en celdas para móviles */
+    }
+    
+    
+}
 
 
 .custom-table {
-    border-collapse: separate; /* Cambia a separate para permitir bordes individuales */
-    border-spacing: 0; /* Elimina el espacio entre celdas */
-    overflow-x: auto; /* Permite scroll horizontal en dispositivos pequeños */
+    border-collapse: separate;
+    border-spacing: 0;
     width: 100%; 
     max-width: 800px;
-    margin-left: 80px;
+    margin: 0 auto; /* Centra la tabla */
     background-color: #cecaca;
-    box-shadow: 0  10px 60px rgba(0, 0, 0, 0.19), 0 60px 60px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.19), 0 60px 60px rgba(0, 0, 0, 0.23);
     border: 1px solid #770606;
 }
-
 /* Para navegadores WebKit (Chrome, Safari) */
 .custom-table-container::-webkit-scrollbar {
     width: 8px; /* Ancho de la barra de desplazamiento */
