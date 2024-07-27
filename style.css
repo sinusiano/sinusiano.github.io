@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'mifuente';
-    src: url('..//ARMY RUST.ttf') format('truetype');
+    src: url('../ARMY RUST.ttf') format('truetype');
 }
 
 body {
@@ -13,7 +13,6 @@ body {
     margin: 0;
     background-color: #f0f0f0;
     box-sizing: border-box;
-     
 }
 
 .custom-table {
@@ -22,9 +21,9 @@ body {
     overflow-x: auto; /* Permite scroll horizontal en dispositivos pequeños */
     width: 100%; 
     max-width: 800px;
-    margin-left: 80px;
+    margin: 20px; /* Ajusta el margen para centrar la tabla */
     background-color: #cecaca;
-    box-shadow: 0  10px 60px rgba(0, 0, 0, 0.19), 0 60px 60px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.19), 0 60px 60px rgba(0, 0, 0, 0.23);
     border: 1px solid #770606;
 }
 
@@ -32,6 +31,9 @@ body {
 @media (max-width: 600px) {
     .custom-table {
         font-size: 14px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+    .custom-table th, .custom-table td {
+        padding: 5px; /* Reduce el padding en pantallas pequeñas */
     }
 }
 
@@ -50,20 +52,6 @@ body {
     background-color: rgb(116, 12, 12);
     color: white;
 }
-/*
-#cpl{
-    background-color: rgb(131, 136, 134);
-}
-
-#cpl{
-    background-color: rgb(153, 156, 155);
-}
-#cpl td:hover {
-    background-color: rgb(116, 12, 12);
-}
-
-*/
-
 
 .custom-table th {
     background-color: #4b1111;
@@ -85,11 +73,13 @@ body {
     background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0) 100%);
     pointer-events: none; /* Permite interacciones con el contenido de la celda */
 }
+
 /* Efecto hover mejorado */
 .custom-table tr:hover td {
     background-color: #0e913a;
     transition: background-color 1s ease;
 }
+
 .custom-table tr:nth-child() {
     background-color: #b8b3b3;
 }
