@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'mifuente';
+    src: url('..//BloodBlocks Project.ttf') format('truetype');
+}
+body {
+    font-family: 'mifuente';
+    font-size: 40px;
+    font-weight: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.custom-table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    margin-left: 80px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 3px;
+    text-align: center;
+}
+
+.custom-table th {
+    background-color: #1d0e74;
+    
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #a05555;
+    
+}
+
+
+.custom-table tr:hover {
+    background-color: #1e2f7c;
+}
