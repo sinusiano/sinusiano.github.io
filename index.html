@@ -189,6 +189,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.transformOrigin = `${event.pageX}px ${event.pageY}px`;
     });
 });
+         document.addEventListener('DOMContentLoaded', function() {
+    var clickableCells = document.querySelectorAll('.clickable');
+
+    clickableCells.forEach(function(cell) {
+        cell.addEventListener('click', function() {
+            var url = cell.getAttribute('data-url');
+            window.location.href = url;
+        });
+    });
+});
     </script>
       
 </body>
