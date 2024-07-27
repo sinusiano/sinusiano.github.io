@@ -22,7 +22,7 @@ body {
                 #caa4a4 100%);
     box-sizing: border-box;
      overflow-y: auto; /* Añade scroll vertical si es necesario */
-     
+     touch-action: manipulation; /* Permite gestos de zoom */
 }
 
 /* gradientes*/
