@@ -40,7 +40,7 @@ body {
     }
     
     .custom-table th, .custom-table td {
-        padding: 5px; /* Reduce el padding en celdas para móviles */
+        padding: 5px 2px;/* Reduce el padding en celdas para móviles */
     }
     
     
@@ -63,7 +63,7 @@ body {
 }
 
 .custom-table-container::-webkit-scrollbar-track {
-    background: #f0f0f0; /* Color del fondo de la barra de desplazamiento */
+    background: #1e2f7c; ; /* Color del fondo de la barra de desplazamiento */
 }
 
 .custom-table-container::-webkit-scrollbar-thumb {
