@@ -6,6 +6,37 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">       
     <title>Tenue</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            var rows = document.querySelectorAll('.custom-table tr');
+        
+            rows.forEach(function(row) {
+                row.addEventListener('touchstart', function() {
+                    this.classList.add('hover');
+                });
+        
+                row.addEventListener('touchend', function() {
+                    this.classList.remove('hover');
+                });
+            });
+        });
+document.addEventListener('DOMContentLoaded', function() {
+    var zoomLevel = 1;
+    var maxZoom = 3;
+    var minZoom = 1;
+    var zoomStep = 0.1;
+
+    document.body.addEventListener('dblclick', function(event) {
+        if (zoomLevel < maxZoom) {
+            zoomLevel += zoomStep;
+        } else {
+            zoomLevel = minZoom;
+        }
+        document.body.style.transform = `scale(${zoomLevel})`;
+        document.body.style.transformOrigin = `${event.pageX}px ${event.pageY}px`;
+    });
+});
 </head>
 <body>
     <div class="table-container">
@@ -155,22 +186,7 @@
         </tbody>
     </table>
     </div>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var rows = document.querySelectorAll('.custom-table tr');
-        
-            rows.forEach(function(row) {
-                row.addEventListener('touchstart', function() {
-                    this.classList.add('hover');
-                });
-        
-                row.addEventListener('touchend', function() {
-                    this.classList.remove('hover');
-                });
-            });
-        });
-        </script>
+      
 </body>
 </html> 
            
