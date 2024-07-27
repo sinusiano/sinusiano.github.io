@@ -19,6 +19,11 @@ body {
     touch-action: manipulation;
 }
 
+.clickable {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
 /* Gradientes */
 .custom-table th {
     background: linear-gradient(to right, #4b1111, #7c1e1e);
