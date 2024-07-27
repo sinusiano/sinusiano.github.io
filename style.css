@@ -4,9 +4,8 @@
 }
 
 body {
-    font-family: 'mifuente', cursive;
-    font-size: italic;
-    font: bold;
+    font-family: 'mifuente',  "Courier New", Courier, monospace;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: flex-start;
