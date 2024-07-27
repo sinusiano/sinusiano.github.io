@@ -4,36 +4,30 @@
 }
 
 body {
-    font-family: 'mifuente',  cursive ;
-    font-size:italic;
+    font-family: 'mifuente', cursive;
+    font-size: italic;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para permitir scroll */
+    align-items: flex-start;
     min-height: 100vh; 
-    padding: 5px; /* Añade padding para evitar que el contenido toque los bordes en pantallas pequeñas */
+    padding: 5px;
     margin: 0;
-    background-color: #f0f0f0;
-    background:
-    linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    background: radial-gradient(circle at center, 
-                #ffffff 0%, 
-                #f0f0f0 30%, 
-                #e0e0e0 60%, 
-                #caa4a4 100%);
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f0f0 30%, #e0e0e0 60%, #caa4a4 100%);
     box-sizing: border-box;
-     overflow-y: auto; /* Añade scroll vertical si es necesario */
-     touch-action: manipulation; /* Permite gestos de zoom */
+    overflow-y: auto;
+    touch-action: manipulation;
 }
 
-/* gradientes*/
+/* Gradientes */
 .custom-table th {
-background: linear-gradient(to right, #4b1111, #7c1e1e);
+    background: linear-gradient(to right, #4b1111, #7c1e1e);
     color: rgb(247, 243, 243);
     border-top: 1px solid #7c1e1e;
     border-left: 1px solid #7c1e1e;
     border-right: 1px solid #2e0a0a;
     border-bottom: 1px solid #2e0a0a;
 }
+
 #cpl td {
     background: linear-gradient(to bottom, rgb(153, 156, 155), rgb(133, 136, 135));
 }
@@ -50,75 +44,56 @@ background: linear-gradient(to right, #4b1111, #7c1e1e);
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, 
-                rgba(255,255,255,0.3) 0%, 
-                rgba(255,255,255,0) 50%, 
-                rgba(0,0,0,0.1) 51%, 
-                rgba(0,0,0,0) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0) 100%);
     pointer-events: none;
 }
 
 .table-container {
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* Para un desplazamiento suave en iOS */
-}
-
-.custom-table {
-    min-width: 600px; /* Ajusta este valor según sea necesario */
-}
-
-.table-container {
-    width: 100%;
-    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    -webkit-overflow-scrolling: touch;
     padding: 10px;
 }
-/* Media queries para dispositivos móviles */
-@media (max-width: 600px) {
-    .custom-table {
-        font-size: 14px;
-        max-width: 100%; /* Asegura que la tabla ocupe todo el ancho en móviles */
-    }
-    
-    .custom-table th, .custom-table td {
-        padding: 5px 2px;/* Reduce el padding en celdas para móviles */
-    }
-    
-    
-}
-
 
 .custom-table {
+    min-width: 600px;
     border-collapse: separate;
     border-spacing: 0;
-    width: 100%; 
+    width: 100%;
     max-width: 800px;
-    margin: 0 auto; /* Centra la tabla */
+    margin: 0 auto;
     background-color: #cecaca;
     box-shadow: 0 10px 60px rgba(0, 0, 0, 0.19), 0 60px 60px rgba(0, 0, 0, 0.23);
     border: 1px solid #770606;
 }
+
 /* Para navegadores WebKit (Chrome, Safari) */
 .custom-table-container::-webkit-scrollbar {
-    width: 8px; /* Ancho de la barra de desplazamiento */
+    width: 8px;
 }
 
 .custom-table-container::-webkit-scrollbar-track {
-    background: #1e2f7c; ; /* Color del fondo de la barra de desplazamiento */
+    background: #1e2f7c;
 }
 
 .custom-table-container::-webkit-scrollbar-thumb {
-    background: #888; /* Color de la barra de desplazamiento */
-    border-radius: 10px; /* Bordes redondeados */
+    background: #888;
+    border-radius: 10px;
 }
 
 .custom-table-container::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color de la barra de desplazamiento al pasar el mouse */
+    background: #555;
 }
+
 /* Media queries para dispositivos móviles */
 @media (max-width: 600px) {
     .custom-table {
-        font-size: 14px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .custom-table th, .custom-table td {
+        padding: 5px 2px;
     }
 }
 
@@ -126,57 +101,14 @@ background: linear-gradient(to right, #4b1111, #7c1e1e);
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
-    position: relative; /* Para posicionamiento de pseudo-elementos */
+    position: relative;
 }
 
-#cpl td {
-    background-color: rgb(153, 156, 155);
-}
-
-#cpl:hover td {
-    background-color: rgb(116, 12, 12);
-    color: white;
-}
-/*
-#cpl{
-    background-color: rgb(131, 136, 134);
-}
-
-#cpl{
-    background-color: rgb(153, 156, 155);
-}
-#cpl td:hover {
-    background-color: rgb(116, 12, 12);
-}
-
-*/
-
-
-.custom-table th {
-    background-color: #4b1111;
-    color: rgb(247, 243, 243);
-    border-top: 1px solid #7c1e1e; /* Borde superior más claro */
-    border-left: 1px solid #7c1e1e; /* Borde izquierdo más claro */
-    border-right: 1px solid #2e0a0a; /* Borde derecho más oscuro */
-    border-bottom: 1px solid #2e0a0a; /* Borde inferior más oscuro */
-}
-
-/* Efecto 3D para celdas */
-.custom-table th::after, .custom-table td::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0) 100%);
-    pointer-events: none; /* Permite interacciones con el contenido de la celda */
-}
-/* Efecto hover mejorado */
 .custom-table tr:hover td {
     background-color: #0e913a;
     transition: background-color 1s ease;
 }
+
 .custom-table tr:nth-child() {
     background-color: #b8b3b3;
 }
